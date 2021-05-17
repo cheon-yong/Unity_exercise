@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        Managers.Input.KeyAction -= OnKeyboard;
+        Managers.Input.KeyAction += OnKeyboard;
+
     }
     float _yAngle = 0.0f;
     void Update()
@@ -24,7 +26,10 @@ public class PlayerController : MonoBehaviour
         //transform.rotation
 
         //transform.rotation = Quaternion.Euler(new Vector3(0.0f, _yAngle, 0.0f));
+    }
 
+    void OnKeyboard()
+    {
         if (Input.GetKey(KeyCode.W))
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.forward), 0.2f);
