@@ -9,13 +9,15 @@ public class TestCollision : MonoBehaviour
     // 3) 상대한테 Collider가 존재 (IsTrigger : off)
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collsion!");
+        Debug.Log($"Collsion! @ {collision.gameObject.name}");
     }
 
-
+    // 1) 둘 다 Collider 가 있어야 한다
+    // 2) 둘 중 하나는 IsTrigger : On
+    // 3) 둘 중 하나는 Rigidbody가 있어야 한다
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triiger !");
+        Debug.Log($"Triiger ! @ {other.gameObject.name}");
     }
 
     void Start()
