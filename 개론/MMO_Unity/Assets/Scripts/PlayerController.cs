@@ -3,23 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// Tank, Player는 prefab 비유
-class Tank
-{
-    // 여러 정보들
-    public float speed = 15.0f;
-    Player player; // 포함관계 (Nested Prefab)
-}
 
-class FastTank : Tank
-{
-
-}
-
-class Player
-{
-
-}
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,8 +14,6 @@ public class PlayerController : MonoBehaviour
     {
         Managers.Input.KeyAction -= OnKeyboard;
         Managers.Input.KeyAction += OnKeyboard;
-
-        Tank tank1 = new Tank();
     }
     float _yAngle = 0.0f;
     void Update()
