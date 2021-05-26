@@ -600,3 +600,43 @@ Total: 1.632200 ms (FindLiveObjects: 0.249600 ms CreateObjectMapping: 0.028600 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   requireTextureImportCompression: false -> true
+========================================================================
+Received Import Request.
+  Time since last request: 59.785467 seconds.
+  path: Assets/Scripts/Managers/Managers.cs
+  artifactKey: Guid(4341e8657444fa549914f335bffadbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Managers/Managers.cs using Guid(4341e8657444fa549914f335bffadbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0295dc3cc4e5edda52a7adc95194a736') in 0.007838 seconds
+  Import took 0.009649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034694 seconds.
+  path: Assets/Scripts/Managers/Managers.cs
+  artifactKey: Guid(4341e8657444fa549914f335bffadbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Managers/Managers.cs using Guid(4341e8657444fa549914f335bffadbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0295dc3cc4e5edda52a7adc95194a736') in 0.003356 seconds
+  Import took 0.005750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.303287 seconds.
+  path: Assets/Resources/Art
+  artifactKey: Guid(a65d94fa97ce7b44a820378b2ae63f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Art using Guid(a65d94fa97ce7b44a820378b2ae63f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c755617ab132b1e2f9d24b0d6696cfac') in 0.005892 seconds
+  Import took 0.007819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 452.249972 seconds.
+  path: Assets/Resources/Prefabs/unitychan.prefab
+  artifactKey: Guid(537aba9591f7f5e499ce3607a2578bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/unitychan.prefab using Guid(537aba9591f7f5e499ce3607a2578bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e35e2c42c5b19028b6e84267d80c4358') in 0.114647 seconds
+  Import took 0.117531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.675092 seconds.
+  path: Assets/Resources/Prefabs/UnityChan.prefab
+  artifactKey: Guid(537aba9591f7f5e499ce3607a2578bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/UnityChan.prefab using Guid(537aba9591f7f5e499ce3607a2578bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c658ede36dc421ba9fba6bb32f68b8b3') in 0.042620 seconds
+  Import took 0.045622 seconds .
+
