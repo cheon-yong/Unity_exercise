@@ -2,11 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Tank, Player는 prefab 비유
 class Tank
 {
     // 여러 정보들
     public float speed = 15.0f;
+    Player player; // 포함관계 (Nested Prefab)
+}
 
+class FastTank : Tank
+{
+
+}
+
+class Player
+{
 
 }
 
