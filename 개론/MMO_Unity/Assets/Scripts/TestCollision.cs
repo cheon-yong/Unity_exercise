@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestCollision : MonoBehaviour
 {
-    // 1) 나한테 RigidBody가 존재 (IsKinematic : off)
+    // 1) 나 또는 상대 RigidBody가 존재 (IsKinematic : off)
     // 2) 나한테 Collider가 존재 (IsTrigger : off)
     // 3) 상대한테 Collider가 존재 (IsTrigger : off)
     private void OnCollisionEnter(Collision collision)
@@ -28,5 +28,16 @@ public class TestCollision : MonoBehaviour
     void Update()
     {
         
+        Vector3 look = transform.TransformDirection(Vector3.forward);
+        Debug.DrawRay(transform.position + Vector3.up, look * 10, Color.red);
+
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(transform.position + Vector3.up, look, 10);
+
+        foreach (RaycastHit hit in hits)
+        {
+            Debug.Log($"Ray Cast {hit.collider.gameObject.name}");
+
+        }
     }
 }
