@@ -27,7 +27,7 @@ public class TestCollision : MonoBehaviour
 
     void Update()
     {
-        
+        /*
         Vector3 look = transform.TransformDirection(Vector3.forward);
         Debug.DrawRay(transform.position + Vector3.up, look * 10, Color.red);
 
@@ -39,5 +39,12 @@ public class TestCollision : MonoBehaviour
             Debug.Log($"Ray Cast {hit.collider.gameObject.name}");
 
         }
+        */
+
+        // Local <-> World <-> Viewport <-> Screen
+        
+        // Debug.Log(Input.mousePosition); // Screen
+
+        Debug.Log(Camera.main.ScreenToViewportPoint(Input.mousePosition)); // Viewport 비율로 표시
     }
 }
