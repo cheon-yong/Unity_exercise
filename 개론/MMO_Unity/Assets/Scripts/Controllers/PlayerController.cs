@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     {
         Managers.Input.MouseAction -= OnMouseClicked;
         Managers.Input.MouseAction += OnMouseClicked;
+
+        // TEMP
+        Managers.UI.ShowSceneUI<UI_Inven>();
     }
     public enum PlayerState
     {
@@ -23,7 +26,7 @@ public class PlayerController : MonoBehaviour
         Moving,
         Idle,
     }
-
+    
     PlayerState _state = PlayerState.Idle;
 
     void UpdateDie()
