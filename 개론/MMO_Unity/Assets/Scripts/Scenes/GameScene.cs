@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class GameScene : BaseScene
 {
-    void VeryComlicated()
-    {
-        for (int i = 0; i < 10000000; i++)
-        {
-            // 어마어마한 작업
-            Debug.Log("Hello");
-        }
-    }
+    Coroutine co;
 
     protected override void Init()
     {
@@ -20,11 +13,28 @@ public class GameScene : BaseScene
         SceneType = Define.Scene.Game;
 
         Managers.UI.ShowSceneUI<UI_Inven>();
+
+        co = StartCoroutine("ExplodeAfterSeconds", 4.0f);
+        StartCoroutine("CoStopExplode", 2.0f);
     }
 
-    private void Update()
+    IEnumerator CoStopExplode (float seconds)
     {
-        VeryComlicated();
+        Debug.Log("Stop Enter");
+        yield return new WaitForSeconds(seconds);
+        Debug.Log("Stop Execute !!!");
+        if (co != null)
+        {
+            StopCoroutine(co);
+            co = null;
+        }
+    }
+
+    IEnumerator ExplodeAfterSeconds(float seconds)
+    {
+        Debug.Log("Explods Enter");
+        yield return new WaitForSeconds(seconds);
+        Debug.Log("Explods Excute !!!");
     }
 
     public override void Clear()
