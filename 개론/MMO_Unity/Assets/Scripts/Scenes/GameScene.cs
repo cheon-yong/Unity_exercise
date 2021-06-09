@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class GameScene : BaseScene
 {
+    void VeryComlicated()
+    {
+        for (int i = 0; i < 10000000; i++)
+        {
+            // 어마어마한 작업
+            Debug.Log("Hello");
+        }
+    }
+
     protected override void Init()
     {
         base.Init();
@@ -11,13 +20,15 @@ public class GameScene : BaseScene
         SceneType = Define.Scene.Game;
 
         Managers.UI.ShowSceneUI<UI_Inven>();
+    }
 
-        for (int i = 0; i < 5; i++)
-            Managers.Resource.Instantiate("UnityChan");
+    private void Update()
+    {
+        VeryComlicated();
     }
 
     public override void Clear()
     {
-        throw new System.NotImplementedException();
+        
     }
 }
