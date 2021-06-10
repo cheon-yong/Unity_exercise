@@ -6,6 +6,7 @@ public class PlayerStat : Stat
 {
     [SerializeField]
     int _exp;
+    [SerializeField]
     int _gold;
 
     public int Exp { get { return _exp; } set { _exp = value; } }
