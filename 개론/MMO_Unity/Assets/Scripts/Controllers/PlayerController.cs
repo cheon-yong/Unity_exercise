@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
         Managers.Input.MouseAction -= OnMouseEvent;
         Managers.Input.MouseAction += OnMouseEvent;
+
+        Managers.UI.MakeWorldSpaceUI<UI_HPBar>(transform);
     }
     
     public PlayerState State
