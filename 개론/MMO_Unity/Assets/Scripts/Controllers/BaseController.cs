@@ -11,6 +11,7 @@ public abstract class BaseController : MonoBehaviour
     [SerializeField]
     protected GameObject _lockTarget;
 
+    public Define.WorldObject WorldObjectType { get; protected set; } = Define.WorldObject.Unknown;
     public virtual Define.State State
     {
         get { return _state; }
@@ -22,7 +23,6 @@ public abstract class BaseController : MonoBehaviour
             switch (_state)
             {
                 case Define.State.Die:
-
                     break;
                 case Define.State.Idle:
                     anim.CrossFade("WAIT", 0.1f);
