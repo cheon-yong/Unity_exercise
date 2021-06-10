@@ -17,8 +17,6 @@ public class Stat : MonoBehaviour
     [SerializeField]
     protected float _moveSpeed;
 
-
-
     public int Level { get { return _level; } set { _level = value; } }
     public int Hp { get { return _hp; } set { _hp = value; } }
     public int MaxHp { get { return _maxHp; } set { _maxHp = value; } }
@@ -34,5 +32,26 @@ public class Stat : MonoBehaviour
         _attack = 10;
         _defense = 5;
         _moveSpeed = 5.0f;
+    }
+
+    public virtual void OnAttacked(Stat attacker)
+    {
+        int damage = Mathf.Max(0, attacker.Attack - Defence);
+        Hp -= damage;
+        if (Hp <= 0)
+        {
+            Hp = 0;
+            OnDead(attacker);
+        }
+    }
+
+    protected virtual void OnDead(Stat attacker)
+    {
+        PlayerStat playerStat = attacker as PlayerStat;
+        if (playerStat != null)
+        {
+            playerStat.Exp += 5;
+        }
+        Managers.Game.Despawn(gameObject);
     }
 }
